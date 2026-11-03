@@ -8,18 +8,23 @@ int main()
 {
 	Library madinatyLibrary;
 	Book book1, book2, book3;
-
-	madinatyLibrary.setLibraryData(1, "madinty", "b11, g111", 5);
-
-	book1.setBookData(1, "book1", "description1", 100, "author1", &madinatyLibrary);
-	book2.setBookData(2, "book2", "description", 200, "author2", &madinatyLibrary);
-	book3.setBookData(3, "book3", "description", 300, "author3", &madinatyLibrary);
 	
-	book1.getBookData();
-	book2.getBookData();
-	book3.getBookData();
+	madinatyLibrary.setLibraryID(1);
+	madinatyLibrary.setLibraryName("Madinaty Library");
+	madinatyLibrary.setLibraryAddress("B11, g111");
+	madinatyLibrary.setLibraryBooksNumber(5);
+
+	book1.setBookData(1, "Head first", "JavaScript book", 500, "O'REILLY", &madinatyLibrary);
+	book2.setBookData(2, "Head first", "C++ book", 600, "O'REILLY", &madinatyLibrary);
+	book3.setBookData(3, "Head first", "Java book", 700, "O'REILLY", &madinatyLibrary);
+
+	madinatyLibrary.setLibraryBooks(0, book1);
+	madinatyLibrary.setLibraryBooks(1, book2);
+	madinatyLibrary.setLibraryBooks(2, book3);
 
 
 	madinatyLibrary.getLibraryData();
+	
+	book1.getBookData();
 }
 
