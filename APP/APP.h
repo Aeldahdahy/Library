@@ -51,6 +51,8 @@ public:
 
 	void getLibraryData();
 
+	void InsertLibraries(Library*, int, int&, const Library&);
+
 	~Library();
 
 private:

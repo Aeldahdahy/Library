@@ -94,6 +94,16 @@ void Library::getLibraryData() {
 	cout << endl;
 }
 
+void Library::InsertLibraries(Library * arr, int capacity, int& curr, const Library& newLib) {
+	if (curr >= capacity) {
+		cout << "Error Library database is full!" << endl;
+		return;
+	}
+
+	arr[curr] = newLib;
+	curr++;
+}
+
 
 //void Library::setLibraryData(int id, string name, string address, int bookIDs) {
 //	data.Id = id;
